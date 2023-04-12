@@ -1,7 +1,7 @@
 <script>
-import SecOneItem from './SecOneItem.vue';
+import SecOneItem from './SecOne/SecOneItem.vue';
 import SecTwoItem from './SecTwoItem.vue';
-import SecThreeItem from './SecThreeItem.vue';
+import SecThreeItem from './SecThree/SecThreeItem.vue';
 import SecFourItem from './SecFourItem.vue';
 import SecFiveItem from './SecFiveItem.vue';
 

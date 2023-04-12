@@ -1,5 +1,5 @@
 <script>
-import NavItem from './NavItem.vue';
+import NavItem from './Nav/NavItem.vue';
 import JumboItem from './JumboItem.vue';
 export default{
     data() {
