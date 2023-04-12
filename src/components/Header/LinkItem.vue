@@ -9,7 +9,7 @@ export default{
     },
 
     props: {
-        img: String,
+        icon: String,
         title: String,
         subTitle: String,
     }
@@ -20,9 +20,7 @@ export default{
 
     <div class="link-container">
 
-        <div class="img-container">
-            <img :src="img" alt="">
-        </div>
+        <i :class="icon" class="icon"></i>
 
         <div class="title"> {{ title }} </div>
 
@@ -30,8 +28,6 @@ export default{
 
     </div>
 
-
-    
 </template>
 
 <style scoped lang="scss">
@@ -42,15 +38,23 @@ export default{
     align-items: center;
     gap: 5px;
 
-    .title{
+    color: #6f727b;
+
+    font-family: 'Montserrat', sans-serif;
+
+    .icon{
         font-size: 0.8em;
-        color: #6f727b;
+    }
+
+    .title{
+        font-size: 0.7em;
+        font-weight: bold;
+        letter-spacing: 1px;
     }
 
     .subtitle{
-        font-size: 0.6em;
-        color: #6f727b;
-    }
+        font-size: 0.5em;
+    }   
 }
 
 

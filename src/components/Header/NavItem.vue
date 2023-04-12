@@ -5,32 +5,51 @@ export default{
     data() {
         return{
 
-            navLinkLeft: [
+            navLink: [
                 [
                     {
-                        image: "",
-                        title: "treatments",
-                        subTitle: "Face & Body"
+                        icon: "fa-solid fa-house",
+                        title: "",
+                        subTitle: "",
+                        over: false, 
                     },
-    
+
                     {
-                        image: "",
+                        icon: "fa-brands fa-pagelines",
+                        title: "treatments",
+                        subTitle: "Face & Body",
+                        over: false, 
+                    },
+
+                    {
+                        icon: "fa-solid fa-person",
                         title: "about",
-                        subTitle: "Our Team"
+                        subTitle: "Our Team",
+                        over: false, 
                     },
                 ],
 
                 [
                     {
-                        image: "",
+                        icon: "fa-solid fa-heart",
                         title: "journal",
-                        subTitle: "Tips & Tricks"
+                        subTitle: "Tips & Tricks",
+                        over: false,  
                     },
+                    
         
                     {
-                        image: "",
+                        icon: "fa-solid fa-bookmark",
                         title: "book now",
-                        subTitle: "Special Offers"
+                        subTitle: "Special Offers",
+                        over: false,   
+                    },
+
+                    {
+                        icon: "fa-solid fa-plus",
+                        title: "",
+                        subTitle: "",
+                        over: false,    
                     },
                 ]
             ],
@@ -39,7 +58,7 @@ export default{
 
     components:{
         LinkItem,
-    }
+    },
 }
 </script>
 
@@ -47,17 +66,14 @@ export default{
 
     <nav>
         <div id="link-container">
-            <i class="icon fa-solid fa-house"></i>
 
-            <LinkItem v-for="link in this.navLinkLeft" :img="link[0].image" :title="link[0].title.toUpperCase()" :subTitle="link[0].subTitle"></LinkItem>
+            <LinkItem v-for="link in this.navLink[0]" :icon="link.icon" :title="link.title.toUpperCase()" :subTitle="link.subTitle" :class="link.over ? 'over' : '', link.active ? 'active' : ''" class="link" @mouseover="link.over = true" @mouseleave="link.over = false"></LinkItem>
 
             <div id="logo-container">
                 <img src="/img/avada-spa-logo-retina-new.png" alt="">
             </div>
         
-            <LinkItem v-for="link in this.navLinkLeft" :img="link[1].image" :title="link[1].title.toUpperCase()" :subTitle="link[1].subTitle"></LinkItem>
-
-            <i class="icon fa-solid fa-plus"></i>
+            <LinkItem v-for="link in this.navLink[1]" :icon="link.icon" :title="link.title.toUpperCase()" :subTitle="link.subTitle" :class="link.over ? 'over' : '', link.active ? 'active' : ''" class="link" @mouseover="link.over = true" @mouseleave="link.over = false"></LinkItem>
         </div>
     </nav>
 
@@ -80,7 +96,7 @@ nav{
         align-items: center;
         gap: 50px;
 
-        width: 60%;
+        width: 80%;
         height: 100%;
         
         #logo-container{
@@ -90,12 +106,18 @@ nav{
                 width: 100%;
             }
         }
-
-        .icon{
-            font-size: 0.8em;
-            color: #6f727b;
-        }
         
+        .link{
+            cursor: pointer;
+            &.over{
+                color: #33a7b9;
+            }
+
+            &.active{
+                color: #33a7b9;
+            }
+        }
+
     }
 }
     
