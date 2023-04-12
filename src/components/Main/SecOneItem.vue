@@ -56,6 +56,10 @@ export default{
 
             </div>
         </div>
+
+        <div id="img-container">
+            <img src="/img/vector.svg" alt="">
+        </div>
     </section>
 </template>
 
@@ -156,4 +160,15 @@ export default{
 
     }
 }
+
+    #img-container{
+        width: 100%;
+        height: 50px;
+
+        img{
+            width: 100%;
+
+            translate: 0 49px; 
+        }
+    }
 </style>
