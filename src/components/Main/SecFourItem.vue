@@ -41,7 +41,7 @@ export default{
             flex-direction: column;
             gap: 20px;
 
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Lato', sans-serif;
             color: rgba(255, 255, 255, 0.75);
 
             text-align: center;
