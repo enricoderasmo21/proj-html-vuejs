@@ -51,7 +51,9 @@ export default{
             <div id="inner-container">
 
                 <div id="img-container">
-                    <img src="/img/face_and_body_treatments-new.jpg" alt="">
+                    <div id="img-inner-container">
+                        <img src="/img/face_and_body_treatments-new.jpg" alt="">
+                    </div>
                 </div>
 
                 <div id="info-container">
@@ -101,7 +103,6 @@ export default{
         padding-top: 90px;
         
         #img-container{
-
             padding: 18px;
     
             width: 500px;
@@ -111,26 +112,27 @@ export default{
 
             box-shadow: 4px 4px 6px rgba(0,0,0, 0.2);
 
-            overflow: hidden;
+            #img-inner-container{
+                overflow: hidden;
+
+                img{
+                    width: 100%;
     
-            img{
-                width: 100%;
-
-                transition: all .2s ease-in-out; 
-
-                &:hover{
-                    transform: scale(1.6);
+                    transition: all .8s ease-in-out; 
+    
+                    &:hover{
+                        transform: scale(1.6);
+                    }
                 }
-    
             }
         }
 
         #info-container{
             display: flex;
             flex-direction: column;
-            gap: 38px;
+            gap: 30px;
 
-            padding-top: 60px;
+            padding-top: 40px;
 
             width: 340px;
 
