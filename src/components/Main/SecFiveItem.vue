@@ -42,7 +42,6 @@ export default{
     #inner-container{
         display: flex;
         flex-direction: row;
-        // justify-content: space-between;
         align-items: center;
         gap: 30px;
 
@@ -90,7 +89,6 @@ export default{
         }
 
         #btn{
-
             padding: 10px 28px;
             margin-left: 60px;
 
@@ -110,9 +108,7 @@ export default{
             &:hover{
                 background-color: #33a7b9;
             }
-
         }
     }
 }
-
 </style>
