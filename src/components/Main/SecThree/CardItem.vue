@@ -87,9 +87,9 @@ export default{
             font-size: 1.4em;
             color: #b9afa1;
     
-            background-color: #dbdada;
+            background-color: white;
 
-            transition: background-color .4s ease-in-out 100ms;
+            transition: background-color 1s ease-in-out 100ms;
 
             &:hover{
                 background-color: #b9afa1;
