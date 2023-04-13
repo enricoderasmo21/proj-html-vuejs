@@ -16,8 +16,14 @@ export default{
 
     <div class="card">
 
-        <div class="img-container">
-            <img :src="card.img" alt="">
+        <div class="toggle-container">
+            <div class="img-container">
+                <img :src="card.img" alt="">
+            </div>
+    
+            <div class="secondary">
+                <em>{{ card.title }}</em>
+            </div>
         </div>
 
         <div class="info-container">
@@ -46,13 +52,57 @@ export default{
 
     width: calc(100% / 4);
 
-    .img-container{
+    .toggle-container{
+        position: relative;
+
         width: 100%;
+        height: 422px;
 
-        border-right: 1.5px solid white;
 
-        img{
+        .img-container{
             width: 100%;
+            
+            border-right: 1.5px solid white;
+    
+            img{
+                width: 100%;
+    
+            }
+        }
+    
+        .secondary{
+            position: absolute;
+            top: 0;
+            left: 0;
+    
+            display: none;
+            justify-content: center;
+            align-items: center;
+    
+            width: 100%;
+            height: 100%;
+    
+            border-right: 1.5px solid white;
+    
+            font-size: 1.4em;
+            color: #b9afa1;
+    
+            background-color: #dbdada;
+
+            transition: background-color .4s ease-in-out 100ms;
+
+            &:hover{
+                background-color: #b9afa1;
+                color: white;  
+            }
+
+            
+        }
+
+        &:hover .secondary{
+            display: flex;
+
+            cursor: pointer;
         }
     }
 
@@ -83,10 +133,8 @@ export default{
             font-size: 0.9em;
             line-height: 1.5em;
             color: #747474;
-        }
-        
+        }   
     }
-
 }
 
 </style>
