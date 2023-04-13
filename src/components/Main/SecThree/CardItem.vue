@@ -79,7 +79,7 @@ export default{
         .info{
             padding-bottom: 10px;
 
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Lato', sans-serif;
             font-size: 0.9em;
             line-height: 1.5em;
             color: #747474;

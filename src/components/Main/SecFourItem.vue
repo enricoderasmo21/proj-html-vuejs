@@ -13,7 +13,7 @@ export default{
         <div id="container">
             <div id="inner-container">
                 <div id="text">
-                    <p>"If you want to relax, watch the clouds pass by if you're laying on the grass, or sit in front of the creek; just doing nothing and having those still moments is what really rejuvenates the body..."</p>
+                    <p> <em>"If you want to relax, watch the clouds pass by if you're laying on the grass, or sit in front of the creek; just doing nothing and having those still moments is what really rejuvenates the body..."</em></p>
                     <div id="author"> FRIEDA FRIEDSON, <span id="job">MASSEUSE</span></div>
                 </div>
             </div>
